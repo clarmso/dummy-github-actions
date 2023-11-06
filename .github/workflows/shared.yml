@@ -2,11 +2,16 @@ name: Shared Workflows 1
 
 on:
   workflow_call:
+    inputs:
+      message:
+        required: false
+        type: string
+        default: "world"
 
 jobs:
   triage:
     runs-on: ubuntu-latest
     steps:
-    - name: Hello World!
+    - name: Say hello
       run: |
-        echo "Hello World!"
+        echo Hello "${{ message }}"!
