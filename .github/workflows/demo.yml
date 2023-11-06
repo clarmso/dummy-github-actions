@@ -32,5 +32,10 @@ jobs:
             echo "$VAR_02"
             echo "$VAR_03"
 
-  run-reusable-workflow:
+  run-reusable-workflow-1:
     uses: clarmso/dummy-github-actions/.github/workflows/shared.yml@main
+
+  run-reusable-workflow-2:
+    uses: clarmso/dummy-github-actions/.github/workflows/shared.yml@main
+    with:
+      message: "Clare"
