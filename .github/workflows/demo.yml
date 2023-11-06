@@ -26,5 +26,8 @@ jobs:
             echo "VAR_02=${{ secrets.VAR_02 }}" >> $GITHUB_ENV
             echo "VAR_03=${{ secrets.VAR_03 }}" >> $GITHUB_ENV
 
-      - name: Update DB - test coverage
-        #run: python ./__main__.py --report-type test-case-coverage --project ALL 
+      - name: Retrieve variable names
+        run: | 
+            echo "$VAR_01"
+            echo "$VAR_02"
+            echo "$VAR_03"
