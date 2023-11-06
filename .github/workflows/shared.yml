@@ -2,6 +2,11 @@ name: Shared Workflows 1
 
 on:
   workflow_call:
+    inputs:
+      message:
+        required: false
+        type: string
+        default: "World"
 
 jobs:
   triage:
