@@ -34,5 +34,3 @@ jobs:
 
   run-reusable-workflow:
     uses: clarmso/dummy-github-actions/.github/workflows/shared.yml@main
-    with:
-      message: "Clare"
