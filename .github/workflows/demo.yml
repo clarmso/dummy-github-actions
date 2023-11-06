@@ -28,7 +28,7 @@ jobs:
             echo "CLOUD_SQL_DATABASE_USERNAME=${{ secrets.CLOUD_SQL_DATABASE_USERNAME }}" >> $GITHUB_ENV
 	    echo "HELLO_ENV_VAR_1=${{ vars.HELLO_ENV_VAR_1 }} >> $GITHUB_ENV
 
-      - name: Retrieve variable names
+     - name: Retrieve variable names
         run: | 
             echo "$VAR_01"
             echo "$VAR_02"
