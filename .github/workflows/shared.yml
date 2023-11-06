@@ -6,6 +6,7 @@ on:
       message:
         required: false
         type: string
+        default: "world"
 
 jobs:
   triage:
