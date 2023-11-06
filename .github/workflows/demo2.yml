@@ -1,0 +1,33 @@
+name: Testops Report PUSH 
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Update testops DB 
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out source repository
+        uses: actions/checkout@v2
+
+      - name: Setup python 
+        uses: actions/setup-python@v1
+
+      - name: Install requirements 
+        run: pip install -r requirements.txt
+
+      - name: Set env vars 
+        run: | 
+            echo "VAR_01=${{ secrets.VAR_01 }}" >> $GITHUB_ENV
+            echo "VAR_02=${{ secrets.VAR_02 }}" >> $GITHUB_ENV
+            echo "VAR_03=${{ secrets.VAR_03 }}" >> $GITHUB_ENV
+
+      - name: Retrieve variable names
+        run: | 
+            echo "$VAR_01"
+            echo "$VAR_02"
+            echo "$VAR_03"
